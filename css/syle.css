@@ -154,33 +154,39 @@ a{
     color: white;
 }
 
-footer{
+.footer-buttons{
     position: fixed;
     bottom: 0px;
-    height: 7rem;
+    height: 4.5rem;
     width: 100%;
     text-align: center;
-}
+    }
 
-footer div {
-    margin: 0 45.7%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 13.3rem;
-}
+    .wpp-button,
+    .ig-button,
+    .fb-button{
+        cursor: pointer;
+        background-color: transparent;
+        border: 0;
+    }
+
+    .wpp-svg,
+    .ig-svg,
+    .fb-svg{
+        width: 3.8rem;
+        height: 3rem;
+    }
 
 .footer-tragos{
     position:initial;
     bottom: auto;
     height: 0;
-    background-color: #000;
 }
 
-.footer-tragos div{
+.footer-tragos .footer-buttons{
     position: initial;
     top: auto;
-    transform: translateY(-142%);
+    transform: translateY(-100%);
 }
 
 i{
