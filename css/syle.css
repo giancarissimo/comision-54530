@@ -1,0 +1,389 @@
+/* fuente con todos sus tamaños */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Comfortaa', cursive;
+    font-size: 10px;
+    color: white
+}
+
+body::-webkit-scrollbar{
+    background-color: black;
+    width: .7rem;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: rgb(148, 132, 132);
+    border-radius: 3.5rem;
+}
+
+body::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(121, 106, 106);
+}
+
+.body-inicio,
+.body-nosotros,
+.body-tienda,
+.body-visitanos{
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.body-inicio{
+    background-image: url(../assets/images/bar-inicio.jpg);
+    background-position-y: -15rem;
+}
+
+.body-nosotros{
+    background-image: url(../assets/images/bar-nosotros.jpg);
+    background-position-y: -35rem;
+}
+
+.body-tienda{
+    background-image: url(../assets/images/bar-tienda-0.jpg);
+    background-position-y: -65rem;
+}
+
+.body-visitanos{
+    background-image: url(../assets/images/bar-visitanos.jpg);
+    background-position-y: -98rem;
+}
+
+.contenido1,
+.contenido2,
+.contenido3,
+.contenido4{
+    background-size: cover;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.contenido1{
+    background-image: url(../assets/images/bar-tragos-1.jpg);
+    background-position-y: -92rem;
+    padding: 25rem 7rem;
+}
+.contenido2{
+    background-image: url(../assets/images/bar-tragos-2.jpg);
+    background-position-y: -96rem;
+
+    justify-content: flex-end;
+    padding: 22rem 12rem;
+}
+.contenido3{
+    background-image: url(../assets/images/bar-tragos-3.jpg);
+    background-position-y: -45rem;
+    padding: 22rem 12rem;
+}
+.contenido4{
+    background-image: url(../assets/images/bar-tragos-4.jpg);
+    background-position-y: -60rem;
+    padding: 22rem 12rem;
+}
+
+.background-black,
+.background-black-2,
+.background-black-3,
+.background-black-4,
+.background-black-5{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    z-index: -1;
+}
+
+.background-black{
+    backdrop-filter: blur(0.25rem);
+}
+
+.background-black-2{
+    backdrop-filter: blur(.33rem);
+}
+
+.background-black-3{
+    backdrop-filter: blur(.5rem);
+}
+
+.background-black-4{
+    backdrop-filter: blur(.5rem);
+}
+
+.background-black-5{
+    backdrop-filter: blur(.4rem);
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    left: 0rem;
+    top: 0rem;
+    background-color: rgba(0,0,0,0.75);
+    backdrop-filter: blur(2rem);
+}
+
+.header-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 2.3rem 7rem 2.3rem 0rem;
+    gap: 5rem;
+}
+
+.nav-bar{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 5rem;
+}
+
+a{
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.651);
+    text-decoration: none;
+    transition: all .6s ease;
+    border-radius: 5rem;
+}
+
+.nav-bar a:hover{
+    color: white;
+}
+
+footer{
+    position: fixed;
+    bottom: 0px;
+    height: 7rem;
+    width: 100%;
+    text-align: center;
+}
+
+footer div {
+    margin: 0 45.7%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 13.3rem;
+}
+
+.footer-tragos{
+    position:initial;
+    bottom: auto;
+    height: 0;
+    background-color: #000;
+}
+
+.footer-tragos div{
+    position: initial;
+    top: auto;
+    transform: translateY(-142%);
+}
+
+i{
+    font-size: 3rem;
+    margin: 0px .6rem;
+}
+
+h1, h2, h3{
+    font-weight: 300;
+}
+
+h1{
+    font-size: 10rem;
+}
+
+h2{
+    font-size: 6rem;
+}
+
+p{
+    font-size: 2.2rem;
+}
+
+.container-inicio{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 20rem 4rem;
+    gap: 5rem;
+}
+
+.titulo-inicio,
+.texto-inicio{
+    text-align: right;
+}
+
+.titulo-inicio{
+    line-height: 12rem;
+    letter-spacing: .2rem;
+}
+
+.texto-inicio{
+    letter-spacing: .05rem;
+}
+
+.container-nosotros{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 17rem 4rem;
+    gap: 5rem;
+}
+
+.titulo-nosotros,
+.texto-nosotros{
+    text-align: left;
+}
+
+.titulo-nosotros{
+    line-height: 12rem;
+    letter-spacing: .2rem;
+}
+
+.texto-nosotros{
+    letter-spacing: .05rem;
+}
+
+.cont1-text{
+    width: 110rem;
+}
+
+.cont2-text{
+    width: 40rem;
+    text-align: justify;
+}
+
+.cont3-text{
+    width: 40rem;
+    text-align: justify;
+}
+
+.cont4-text{
+    width: 45rem;
+    text-align: justify;
+}
+
+.cont2-text h2,
+.cont3-text h2,
+.cont4-text h2{
+    line-height: 8rem;
+}
+
+.cont2-text h2{
+    text-align: right;
+}
+
+.cont2-text p,
+.cont3-text p,
+.cont4-text p{
+    line-height: 3rem;
+    margin-top: 3.5rem;
+}
+
+.vinos{
+    display: flex;
+    justify-content: space-around;
+    padding: 12rem 3rem;
+}
+
+.vino1,
+.vino2,
+.vino3,
+.vino4{
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 28.3rem;
+    height: 30.3rem;
+    border-radius: 2.5rem;
+    backdrop-filter: blur(2.5rem);
+    flex-direction: column;
+    align-items: center;
+    transition: .6s;
+}
+
+.vino1:hover,
+.vino2:hover,
+.vino3:hover,
+.vino4:hover{
+    transform: scale(1.15);
+}
+
+.img-vino1,
+.img-vino2,
+.img-vino3,
+.img-vino4 {
+    height: 20.7rem;
+    min-width: 23rem;
+    object-fit: cover;
+    object-position: 0% 99%;
+    border-radius: 2.5rem;
+    margin-top: 2rem;
+}
+
+.img-vino1{
+    object-position: 0% 78%;
+}
+
+.titulo-vinos{
+    display: flex;
+    flex-direction: column;
+    padding: 20rem 0rem 0rem 0rem;
+}
+
+.titulo-vinos h1{
+    font-size: 6rem;
+    text-align: center;
+}
+
+.vino1 span,
+.vino2 span,
+.vino3 span,
+.vino4 span {
+    font-size: 2.2rem;
+    font-weight: 300;
+    padding-top: 2rem;
+}
+
+.titulo-visitanos,
+.titulo2-visitanos,
+.texto2,
+.titulo3-visitanos,
+.texto3-visitanos,
+.texto3-visitanos2 {
+    position: absolute;
+    line-height: 3rem;
+    letter-spacing: .1rem;
+}
+
+.titulo-visitanos{
+    margin: 20rem 0rem 0rem 17.2rem;
+}
+
+.titulo2-visitanos{
+    margin: 38rem 0rem 0rem 90rem;
+}
+
+.texto2{
+    margin: 45.3rem 0rem 0rem 90rem;
+}
+
+.titulo3-visitanos{
+    margin: 53rem 0rem 0rem 90rem;
+}
+
+.texto3-visitanos{
+    margin: 60.3rem 0rem 0rem 90rem;
+}
+
+.texto3-visitanos2{
+    margin: 67rem 0rem 0rem 90rem;
+}
+
+iframe{
+    position: absolute;
+    margin: 30rem 0rem 0rem 15rem;
+}
