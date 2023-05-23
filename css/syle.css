@@ -121,7 +121,7 @@ body::-webkit-scrollbar-thumb:hover{
 header{
     position: fixed;
     width: 100%;
-    padding: 1rem 2rem;
+    padding: 1rem;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -220,8 +220,11 @@ a{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    padding: 20rem 4rem;
     gap: 5rem;
+    height: 100vh;
+    justify-content: center;
+    padding-bottom: 67px;
+    padding-right: 4rem;
 }
 
 .titulo-inicio,
@@ -258,6 +261,7 @@ a{
 
 .texto-nosotros{
     letter-spacing: .05rem;
+    text-align: justify;
 }
 
 .cont1-text{
@@ -398,4 +402,303 @@ a{
 iframe{
     position: absolute;
     margin: 30rem 0rem 0rem 15rem;
+}
+
+
+@media (max-width: 1440px){
+    .body-inicio{
+        height: 100vh;
+        background-position-y: -35rem;
+        background-position-x: 0rem;
+    }
+    .body-nosotros{
+        height: 100vh;
+        background-position-y: -24rem;
+        background-position-x: 0rem;
+    }
+    .header{
+        height: auto;
+}
+    header .nav .ul li{
+        padding: .7rem 2rem;
+}
+}
+
+@media (max-width: 1024px){
+    .body-inicio{
+        height: 100vh;
+        background-position-y: 0rem;
+        background-position-x: 0rem;
+    }
+    .body-nosotros{
+        height: 100vh;
+        background-position-y: 0rem;
+        background-position-x: 0rem;
+    }
+}
+
+
+@media (max-width: 768px){
+    .body-inicio{
+        height: 100vh;
+        background-position-y: 0rem;
+        background-position-x: 0rem;
+    }
+    .body-nosotros{
+        height: 100vh;
+        background-position-y: -20rem;
+        background-position-x: 0rem;
+    }
+    header .button-menu{
+        display: inline-block;
+        cursor: pointer;
+        border: 0;
+        background-color: transparent;
+        color:white;
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+    #hamburger .button-menu span{
+        border-radius: .5rem;
+        background: white;
+        display: block;
+        width: 60%;
+        margin: .5rem auto;
+        height: .2rem;
+        animation-duration: .5s;
+        animation-fill-mode: forwards;
+    }
+    #hamburger .button-menu.open .top-line{
+        animation-name: top-line-animation;
+    }
+    #hamburger .button-menu.open .middle-line{
+        animation-name: middle-line-animation;
+    }
+    #hamburger .button-menu.open .bottom-line{
+        animation-name: bottom-line-animation;
+    }
+    #hamburger .button-menu .top-line{
+        animation-name: top-line-animation-close;
+    }
+    #hamburger .button-menu .middle-line{
+        animation-name: middle-line-animation-close;
+    }
+    #hamburger .button-menu .bottom-line{
+        animation-name: bottom-line-animation-close;
+    }
+@keyframes top-line-animation{
+    50%, 100%{
+        margin: 0 auto;
+        transform: translateY(0.2rem) rotate(-45deg);
+    }
+}
+@keyframes middle-line-animation{
+    20%, 100%{
+        margin: 0 auto;
+        width: 0;
+        opacity: 0;
+    }
+}
+@keyframes bottom-line-animation{
+    50%, 100%{
+        margin: 0 auto;
+        transform: translateY(-0.2rem) rotate(45deg);
+    }
+}
+@keyframes top-line-animation-close{
+    0%{
+        margin: 0 auto;
+        transform: translateY(0.2rem) rotate(-45deg);
+    }
+    50%, 100%{
+        margin: .5rem auto;
+        transform: translateY(0rem) rotate(0deg);
+    }
+}
+@keyframes middle-line-animation-close{
+    0%{
+        margin: 0 auto;
+        width: 0;
+        opacity: 0;
+    }
+    20%, 100%{
+        margin: 0 auto;
+        width: 60%;
+        opacity: 1;
+    }
+
+}
+@keyframes bottom-line-animation-close{
+    0%{
+        margin: 0 auto;
+        transform: translateY(-.2rem) rotate(45deg);
+    }
+    50%, 100%{
+        margin: .5rem auto;
+        transform: translateY(0rem) rotate(0deg);
+    }
+}
+    header{
+        height: auto;
+        z-index: 1;
+    }
+    header .nav{
+        /* display: none; */
+        width: 100vh;
+        height: 0vh;
+        pointer-events: none;
+        overflow: hidden;
+        transition: all .7s ease;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    header .nav.active{
+        /* display: block; */
+        height: 93.6vh;
+        pointer-events: auto;
+    }
+    header .ul{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 6rem 0rem 0rem 1rem;
+        gap: 6rem;
+    }
+    header li a{
+        font-size: 2.2rem;
+        color: white;
+    }
+    .titulo-inicio,
+    .titulo-nosotros{
+        line-height: 10rem;
+        letter-spacing: .2rem;
+        font-size: 8rem;
+    }
+    .texto-inicio,
+    .texto-nosotros{
+        font-size: 2rem;
+    }
+    .wpp-svg,
+    .ig-svg,
+    .fb-svg{
+        width: 3.3rem;
+        height: 2.5rem;
+    }
+}
+
+
+@media (max-width: 425px){
+    .body-inicio{
+        height: 100vh;
+        background-position-y: 0rem;
+        background-position-x: 0rem;
+    }
+    .body-nosotros{
+        height: 100vh;
+        background-position-y: 0rem;
+        background-position-x: -7.5rem;
+    }
+    header .button-menu{
+        width: 3rem;
+        height: 3rem;
+    }
+    header .nav.active{
+        height: 94.2vh;
+    }
+    header .ul{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 6rem 0rem 0rem .5rem;
+        gap: 5rem;
+    }
+    header li a{
+        font-size: 2rem;
+    }
+    .container-inicio{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2.4rem;
+        height: 100vh;
+        justify-content: center;
+        padding-bottom: 18rem;
+        padding-right: 0rem;
+    }
+    .container-nosotros{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 17rem 4rem;
+        gap: 5rem;
+    }
+    .titulo-inicio,
+    .titulo-nosotros{
+        line-height: 7rem;
+        letter-spacing: .2rem;
+        font-size: 5rem;
+        text-align: center;
+    }
+    .texto-inicio,
+    .texto-nosotros{
+        line-height: 2rem;
+        font-size: 1.4rem;
+    }
+}
+
+
+@media (max-width: 375px){
+    .body-inicio{
+        height: 100vh;
+        background-position-y: 0rem;
+        background-position-x: -12rem;
+    }
+    .body-nosotros{
+        height: 100vh;
+        background-position-y: 0rem;
+        background-position-x: -10rem;
+    }
+    header .ul{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 6rem 0rem 0rem .5rem;
+        gap: 5rem;
+    }
+    header .nav.active{
+        height: 94.2vh;
+    }
+    header li a{
+        font-size: 1.8rem;
+    }
+}
+
+
+@media (max-width: 320px){
+    .body-inicio{
+        height: 100vh;
+        background-position-y: 0rem;
+        background-position-x: -12rem;
+    }
+    .body-nosotros{
+        height: 100vh;
+        background-position-y: 0rem;
+        background-position-x: -13rem;
+    }
+    header .ul{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 6rem 0rem 0rem .5rem;
+        gap: 5rem;
+    }
+    header .nav.active{
+        height: 94.2vh;
+    }
+    header li a{
+        font-size: 1.6rem;
+    }
 }
