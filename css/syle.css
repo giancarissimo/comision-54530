@@ -364,46 +364,36 @@ a{
     padding-top: 2rem;
 }
 
-.titulo-visitanos,
-.titulo2-visitanos,
-.texto2,
-.titulo3-visitanos,
-.texto3-visitanos,
-.texto3-visitanos2 {
-    position: absolute;
-    line-height: 3rem;
-    letter-spacing: .1rem;
+.main-visitanos{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 12rem repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+        ".    .       .       ."
+        ".  visit     .       ."
+        ".  iframe   texto    texto   "
+        ".      .     .         .";
 }
 
 .titulo-visitanos{
-    margin: 20rem 0rem 0rem 17.2rem;
+    grid-area: visit;
+    display: grid;
+    justify-content: center;
+    align-items: center;
 }
 
-.titulo2-visitanos{
-    margin: 38rem 0rem 0rem 90rem;
+.iframe {
+    grid-area: iframe;
 }
 
-.texto2{
-    margin: 45.3rem 0rem 0rem 90rem;
+.info-visitanos{
+    grid-area: texto;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    gap: 3rem;
 }
-
-.titulo3-visitanos{
-    margin: 53rem 0rem 0rem 90rem;
-}
-
-.texto3-visitanos{
-    margin: 60.3rem 0rem 0rem 90rem;
-}
-
-.texto3-visitanos2{
-    margin: 67rem 0rem 0rem 90rem;
-}
-
-iframe{
-    position: absolute;
-    margin: 30rem 0rem 0rem 15rem;
-}
-
 
 @media (max-width: 1440px){
     .body-inicio{
