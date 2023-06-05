@@ -99,23 +99,16 @@ body::-webkit-scrollbar-thumb:hover{
 }
 
 .background-black{
-    backdrop-filter: blur(0.25rem);
+    backdrop-filter: blur(.25rem);
+    -webkit-backdrop-filter: blur(0.25rem);
 }
 
-.background-black-2{
-    backdrop-filter: blur(.33rem);
-}
-
-.background-black-3{
-    backdrop-filter: blur(.5rem);
-}
-
-.background-black-4{
-    backdrop-filter: blur(.5rem);
-}
-
+.background-black-2,
+.background-black-3,
+.background-black-4,
 .background-black-5{
     backdrop-filter: blur(.4rem);
+    -webkit-backdrop-filter: blur(.4rem);
 }
 
 header{
@@ -128,6 +121,7 @@ header{
     align-items: center;
     background-color: rgba(0, 0, 0, 0.70);
     backdrop-filter: blur(8rem);
+    -webkit-backdrop-filter: blur(8rem);
 }
 header .button-menu{
     display: none;
@@ -156,7 +150,8 @@ header li a{
     color: white;
 }
 
-.footer-buttons{
+.footer-buttons,
+.footer-buttons-tienda{
     position: fixed;
     bottom: 0px;
     height: 4.5rem;
@@ -164,20 +159,20 @@ header li a{
     text-align: center;
     }
 
-    .wpp-button,
-    .ig-button,
-    .fb-button{
-        cursor: pointer;
-        background-color: transparent;
-        border: 0;
-    }
+.wpp-button,
+.ig-button,
+.fb-button{
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+}
 
-    .wpp-svg,
-    .ig-svg,
-    .fb-svg{
-        width: 3.8rem;
-        height: 3rem;
-    }
+.wpp-svg,
+.ig-svg,
+.fb-svg{
+    width: 3.8rem;
+    height: 3rem;
+}
 
 .footer-tragos{
     position:initial;
@@ -189,11 +184,6 @@ header li a{
     position: initial;
     top: auto;
     transform: translateY(-100%);
-}
-
-i{
-    font-size: 3rem;
-    margin: 0px .6rem;
 }
 
 h1, h2, h3{
@@ -425,6 +415,132 @@ a{
         background-position-y: 0rem;
         background-position-x: 0rem;
     }
+    .body-tienda{
+        background-position-y: -30rem;
+    }
+    .body-visitanos{
+    background-position-y: -65rem;
+    }
+    .contenido1{
+        background-position-y: -62rem;
+        padding: 30rem 6rem;
+    }
+    .cont1-text{
+        text-align: left;
+    }
+    .cont1-text h1{
+        font-size: 8rem;
+    }
+    .contenido2{
+        background-position-y: -60rem;
+        justify-content: flex-end;
+        padding: 22rem 6rem;
+    }
+    .contenido3{
+        background-position-y: -45rem;
+        padding: 18rem 6rem;
+    }
+    .contenido4{
+        background-position-y: -45rem;
+        padding: 18rem 6rem;
+    }
+    .vinos{
+        display: flex;
+        justify-content: space-around;
+        padding: 12rem 3rem;
+        gap: 3rem;
+    }
+    .vino1,
+    .vino2,
+    .vino3,
+    .vino4{
+        display: flex;
+        background-color: rgba(255, 255, 255, 0.3);
+        width: 27rem;
+        height: 27rem;
+        border-radius: 2.5rem;
+        backdrop-filter: blur(2.5rem);
+        flex-direction: column;
+        align-items: center;
+        transition: .6s;
+    }
+    .vino1:hover,
+    .vino2:hover,
+    .vino3:hover,
+    .vino4:hover{
+        transform: scale(1.15);
+    }
+    .img-vino1,
+    .img-vino2,
+    .img-vino3,
+    .img-vino4 {
+        height: 18rem;
+        min-width: 18rem;
+        object-fit: cover;
+        object-position: 0% 99%;
+        border-radius: 2.5rem;
+        margin-top: 2rem;
+    }
+    .img-vino1{
+        object-position: 0% 78%;
+    }
+    .titulo-vinos{
+        display: flex;
+        flex-direction: column;
+        padding: 20rem 0rem 0rem 0rem;
+    }
+    .titulo-vinos h1{
+        font-size: 6rem;
+        text-align: center;
+    }
+    .vino1 span,
+    .vino2 span,
+    .vino3 span,
+    .vino4 span {
+        font-size: 1.8rem;
+        font-weight: 300;
+        padding-top: 2rem;
+    }
+    .main-visitanos{
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 5rem repeat(3, 1fr);
+        grid-template-rows: 10rem repeat(2, 1fr) 10rem;
+        grid-template-areas:
+            ".    .       .       ."
+            ".  visit     .       ."
+            ".  iframe   texto    texto"
+            ".      .     .         .";
+    }
+    .titulo-visitanos{
+        grid-area: visit;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+    .iframe {
+        grid-area: iframe;
+    }
+    iframe{
+        width: 55rem;
+        height: 50rem;
+    }
+    .info-visitanos{
+        grid-area: texto;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        gap: 3rem;
+    }
+    .titulo-visitanos h1{
+        font-size: 8rem;
+    }
+    .info-visitanos h2{
+        font-size: 4.5rem;
+    }
+    .info-visitanos p{
+        font-size: 1.8rem;
+    }
 }
 
 
@@ -438,6 +554,40 @@ a{
         height: 100vh;
         background-position-y: -20rem;
         background-position-x: 0rem;
+    }
+    .body-visitanos{
+        background-position-y: -28rem;
+    }
+    .background-black-5{
+        backdrop-filter: blur(.20rem);
+        -webkit-backdrop-filter: blur(.20rem);
+    }
+    .contenido1{
+        background-position-y: -29rem;
+        padding: 30rem 4rem;
+    }
+    .contenido2{
+        background-position-y: -27rem;
+        justify-content: flex-end;
+        padding: 22rem 4rem;
+    }
+    .contenido3{
+        background-position-y: -25rem;
+        padding: 18rem 4rem;
+    }
+    .contenido4{
+        background-position-y: -25rem;
+        padding: 18rem 4rem;
+    }
+    .body-tienda{
+        position: relative;
+        height: 100%;
+        background-position-y: 0rem;
+        background-position-x: 0rem;
+        background-size: cover;
+    }
+    .background-black-4{
+        height: 100%;
     }
     header .button-menu{
         display: inline-block;
@@ -533,7 +683,6 @@ a{
         z-index: 1;
     }
     header .nav{
-        /* display: none; */
         width: 100vh;
         height: 0vh;
         pointer-events: none;
@@ -545,7 +694,6 @@ a{
         align-items: flex-start;
     }
     header .nav.active{
-        /* display: block; */
         height: 93.6vh;
         pointer-events: auto;
     }
@@ -570,16 +718,151 @@ a{
     .texto-nosotros{
         font-size: 2rem;
     }
+    .footer-buttons-tienda{
+        position: relative
+    }
     .wpp-svg,
     .ig-svg,
     .fb-svg{
         width: 3.3rem;
         height: 2.5rem;
     }
+    .cont1-text{
+        text-align: left;
+    }
+    .cont1-text h1{
+        font-size: 6rem;
+    }
+    .cont2-text,
+    .cont3-text,
+    .cont4-text{
+        width: 30rem;
+        text-align: justify;
+    }
+    .cont2-text h2,
+    .cont3-text h2,
+    .cont4-text h2{
+        font-size: 4rem;
+        line-height: 5rem;
+}
+    .cont2-text p,
+    .cont3-text p,
+    .cont4-text p{
+        font-size: 1.8rem;
+    }
+    .vinos{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 6rem 3rem;
+        gap: 3rem;
+    }
+    .vino1,
+    .vino2,
+    .vino3,
+    .vino4{
+        display: flex;
+        background-color: rgba(255, 255, 255, 0.3);
+        width: 23rem;
+        height: 25rem;
+        border-radius: 2.5rem;
+        backdrop-filter: blur(2.5rem);
+        flex-direction: column;
+        align-items: center;
+        transition: .6s;
+    }
+    .vino1:hover,
+    .vino2:hover,
+    .vino3:hover,
+    .vino4:hover{
+        transform: scale(1.15);
+    }
+    .img-vino1,
+    .img-vino2,
+    .img-vino3,
+    .img-vino4 {
+        height: 18rem;
+        min-width: 18rem;
+        object-fit: cover;
+        object-position: 0% 99%;
+        border-radius: 2.5rem;
+        margin-top: 2rem;
+    }
+    .img-vino1{
+        object-position: 0% 78%;
+    }
+    .titulo-vinos{
+        display: flex;
+        flex-direction: column;
+        padding: 13rem 0rem 0rem 0rem;
+    }
+    .titulo-vinos h1{
+        font-size: 4rem;
+        text-align: center;
+    }
+    .vino1 span,
+    .vino2 span,
+    .vino3 span,
+    .vino4 span {
+        font-size: 1.6rem;
+        font-weight: 300;
+        padding-top: 1.6rem;
+    }
+    .main-visitanos{
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 5rem repeat(3, 1fr);
+        grid-template-rows: 10rem 10rem 30rem 1fr 5rem;
+        grid-template-areas:
+            ".          .           .           ."
+            "visit      visit       visit       visit"
+            "iframe     iframe      iframe      iframe"
+            "texto      texto       texto       texto"
+            ".          .           .           .";
+    }
+    .titulo-visitanos{
+        grid-area: visit;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+    .iframe {
+        grid-area: iframe;
+        display: grid;
+        justify-content: center;
+    }
+    iframe{
+        width: 35rem;
+        height: 30rem;
+    }
+    .info-visitanos{
+        grid-area: texto;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        gap: 2.4rem;
+    }
+    .titulo-visitanos h1{
+        font-size: 6rem;
+    }
+    .info-visitanos h2{
+        font-size: 4rem;
+        text-align: center;
+    }
+    .info-visitanos p{
+        font-size: 1.8rem;
+        text-align: center;
+    }
 }
 
-
 @media (max-width: 425px){
+    .background-black,
+    .background-black-2,
+    .background-black-3,
+    .background-black-5{
+        height: 100vh;
+    }
     .body-inicio{
         height: 100vh;
         background-position-y: 0rem;
@@ -589,6 +872,30 @@ a{
         height: 100vh;
         background-position-y: 0rem;
         background-position-x: -7.5rem;
+    }
+    .body-visitanos{
+        background-position-y: 0rem;
+        background-position-x: -5rem;
+    }
+    .contenido1{
+        background-position-y: 0rem;
+        background-position-x: -10rem;
+        padding: 20rem 4rem;
+    }
+    .contenido2{
+        background-position-y: 0rem;
+        background-position-x: -10rem;
+        padding: 32rem 3rem 0rem 0rem;
+    }
+    .contenido3{
+        background-position-y: 0rem;
+        background-position-x: -3rem;
+        padding: 26rem 0rem 0rem 3rem;
+    }
+    .contenido4{
+        background-position-y: 0rem;
+        background-position-x: -10rem;
+        padding: 10rem 0rem 0rem 3rem;
     }
     header .button-menu{
         width: 3rem;
@@ -637,8 +944,65 @@ a{
         line-height: 2rem;
         font-size: 1.4rem;
     }
+    .cont1-text{
+        text-align: left;
+    }
+    .cont1-text h1{
+        font-size: 4rem;
+        line-height: 6rem;
+    }
+    .cont2-text,
+    .cont3-text,
+    .cont4-text{
+        width: 18rem;
+        text-align: justify;
+    }
+    .cont2-text h2,
+    .cont3-text h2,
+    .cont4-text h2{
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+    .cont2-text p,
+    .cont3-text p,
+    .cont4-text p{
+        font-size: 1.3rem;
+        line-height: 2rem;
+    }
+    .titulo-visitanos{
+        grid-area: visit;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+    .iframe {
+        grid-area: iframe;
+        display: grid;
+        justify-content: center;
+    }
+    iframe{
+        width: 30rem;
+        height: 33rem;
+    }
+    .info-visitanos{
+        grid-area: texto;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        gap: 2.4rem;
+    }
+    .titulo-visitanos h1{
+        font-size: 4rem;
+    }
+    .info-visitanos h2{
+        font-size: 3rem;
+        text-align: center;
+    }
+    .info-visitanos p{
+        font-size: 1.6rem;
+        text-align: center;
+    }
 }
-
 
 @media (max-width: 375px){
     .body-inicio{
@@ -690,5 +1054,13 @@ a{
     }
     header li a{
         font-size: 1.6rem;
+    }
+    .contenido2{
+        background-position-y: 0rem;
+        background-position-x: -18rem;
+    }
+    iframe{
+        width: 25rem;
+        height: 33rem;
     }
 }
