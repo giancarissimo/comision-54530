@@ -1,0 +1,20 @@
+/* propiedades de "visitanos" */
+.main-visitanos{
+    height: 100vh;
+    @include grid-visit(12rem repeat(3, 1fr), repeat(4, 1fr), ".          .           .           ." ".  visit     .       ."  ".  iframe   texto    texto" ".      .     .         .");
+    .titulo-visitanos{
+        @include gird-objets(visit);
+        align-items: center;
+    }
+    .iframe {
+        @include gird-objets(iframe);
+        iframe{
+            border-radius: 2.5rem;
+        }
+    }
+    .info-visitanos{
+        @include gird-objets(texto);
+        align-content: center;
+        gap: 3rem;
+    }
+}

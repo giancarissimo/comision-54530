@@ -1,0 +1,55 @@
+@media (max-width: 320px){
+    .body-inicio{
+        height: 100vh;
+        background-position-y: 0rem;
+        background-position-x: -12rem;
+    }
+    .body-nosotros{
+        height: 100vh;
+        background-position-y: 0rem;
+        background-position-x: -13rem;
+    }
+    header{
+        .nav.active{
+            height: 94.2vh;
+        }
+        .nav{
+            .ul{
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: space-between;
+                padding: 6rem 0rem 0rem .5rem;
+                gap: 5rem;
+                li{
+                    a{
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+        }
+    }
+    .contenido1{
+        background-position-y: 0;
+        background-position-x: -12rem;
+    }
+    .contenido2{
+        background-position-y: 0rem;
+        background-position-x: -19rem;
+    }
+    .contenido3{
+        background-position-y: 0;
+        background-position-x: -4rem;
+    }
+    .contenido4{
+        background-position-y: 0;
+        background-position-x: -12rem;
+    }
+    .main-visitanos{
+        .iframe{
+            iframe{
+                width: 26rem;
+                height: 29rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+/* reset */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Comfortaa', cursive;
+    color: $color-principal;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+h1{
+    font-size: 10rem;
+    font-weight: 300;
+}
+
+h2{
+    @extend h1;
+    font-size: 6rem;
+}
+
+p{
+    @extend h1;
+    font-size: 2.2rem;
+}
+
+a{
+    text-decoration: none;
+}

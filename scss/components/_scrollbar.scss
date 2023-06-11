@@ -1,0 +1,14 @@
+/* propiedades de "scrollbar" */
+body{
+    &::-webkit-scrollbar{
+        background-color: black;
+        width: .7rem;
+    }
+    &::-webkit-scrollbar-thumb{
+        background-color: rgb(148, 132, 132);
+        border-radius: 3.5rem;
+        &:hover{
+            background-color: rgb(121, 106, 106);
+        }
+    }
+}

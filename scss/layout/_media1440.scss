@@ -1,0 +1,32 @@
+@media (max-width: 1440px){
+    .body-inicio{
+        height: 100vh;
+        background-position-y: -35rem;
+        background-position-x: 0rem;
+    }
+    .body-nosotros{
+        height: 100vh;
+        background-position-y: -24rem;
+        background-position-x: 0rem;
+    }
+    .body-tienda{
+        height: 100vh;
+        background-position-y: -65rem;
+        background-position-x: 0rem;
+    }
+    .body-visitanos{
+        height: 100vh;
+        background-position-y: -98rem;
+        background-position-x: 0rem;
+    }
+    header{
+        height: auto;
+        nav{
+            ul{
+                li{
+                    padding: .7rem 2rem;
+                }
+            }
+        }
+    }
+}

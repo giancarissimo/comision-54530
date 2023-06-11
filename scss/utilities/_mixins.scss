@@ -1,0 +1,32 @@
+@mixin flex-header($flow,$content,$align-i){
+    display: flex;
+    flex-flow: $flow;
+    justify-content: $content;
+    align-items: $align-i;
+}
+
+@mixin flex-containers($direction,$content,$aling-i){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $content;
+    align-items: $aling-i;
+}
+
+@mixin flex-vinos($direction,$aling-i){
+    display: flex;
+    flex-direction: $direction;
+    align-items: $aling-i;
+}
+
+@mixin grid-visit($column,$rows,$areas){
+    display: grid;
+    grid-template-columns: $column;
+    grid-template-rows: $rows;
+    grid-template-areas: $areas;
+}
+
+@mixin gird-objets($g-area,){
+    grid-area: $g-area;
+    display: grid;
+    justify-content: center;
+}

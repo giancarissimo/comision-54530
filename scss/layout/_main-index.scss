@@ -1,0 +1,17 @@
+/* propiedades "inicio" */
+.container-inicio{
+    height: 100vh;
+    @include flex-containers(column,center,flex-end);
+    padding-bottom: 6.7rem;
+    padding-right: 4rem;
+    gap: 5rem;
+    .titulo-inicio{
+        text-align: right;
+        line-height: 12rem;
+        letter-spacing: .2rem;
+    }
+    .texto-inicio{
+        text-align: right;
+        letter-spacing: .05rem;
+    }
+}

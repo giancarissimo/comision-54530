@@ -1,0 +1,53 @@
+/* propiedades de "bodys" */
+.body-inicio{
+    background-image: url(../assets/images/bar-inicio.jpg);
+    background-position-y: -15rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.body-nosotros{
+    @extend .body-inicio;
+    background-image: url(../assets/images/bar-nosotros.jpg);
+    background-position-y: -35rem;
+}
+
+.body-tienda{
+    @extend .body-inicio;
+    background-image: url(../assets/images/bar-tienda-0.jpg);
+    background-position-y: -65rem;
+}
+
+.body-visitanos{
+    @extend .body-inicio;
+    background-image: url(../assets/images/bar-visitanos.jpg);
+    background-position-y: -98rem;
+}
+
+.background-black{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    z-index: -1;
+    backdrop-filter: blur(.25rem);
+    -webkit-backdrop-filter: blur(0.25rem);
+}
+
+.background-black-2{
+    @extend .background-black;
+    backdrop-filter: blur(.4rem);
+    -webkit-backdrop-filter: blur(.4rem);
+}
+
+.background-black-3{
+    @extend .background-black, .background-black-2;
+}
+
+.background-black-4{
+    @extend .background-black, .background-black-2;
+}
+
+.background-black-5{
+    @extend .background-black, .background-black-2;
+}

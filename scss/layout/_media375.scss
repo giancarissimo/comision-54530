@@ -1,0 +1,31 @@
+@media (max-width: 375px){
+    .body-inicio{
+        height: 100vh;
+        background-position-y: 0rem;
+        background-position-x: -12rem;
+    }
+    .body-nosotros{
+        height: 100vh;
+        background-position-y: 0rem;
+        background-position-x: -10rem;
+    }
+    header{
+        nav.active{
+            height: 94.2vh;
+        }
+        nav{
+            ul{
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: space-between;
+                padding: 6rem 0rem 0rem .5rem;
+                gap: 5rem;
+                li{
+                    a{
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+        }
+    }
+}

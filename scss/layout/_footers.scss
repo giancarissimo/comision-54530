@@ -1,0 +1,46 @@
+/* propiedades de los footers */
+.footer-buttons{
+    position: fixed;
+    bottom: 0px;
+    height: 4.5rem;
+    width: 100%;
+    text-align: center;
+}
+
+.footer-buttons-tienda{
+    @extend .footer-buttons;
+}
+
+.footer-tragos{
+    position:initial;
+    bottom: 0px;
+    height: 0;
+    .footer-buttons{
+        @extend .footer-buttons;
+        position: initial;
+        top: auto;
+        transform: translateY(-100%);
+    }
+}
+
+.wpp-button{
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    .wpp-svg{
+        width: 3.8rem;
+        height: 3rem;
+    }
+}
+.ig-button{
+    @extend .wpp-button;
+    .ig-svg{
+        @extend .wpp-svg;
+    }
+}
+.fb-button{
+    @extend .wpp-button;
+    .fb-svg {
+        @extend .wpp-svg;
+    }
+}

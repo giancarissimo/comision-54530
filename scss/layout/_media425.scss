@@ -1,0 +1,142 @@
+@media (max-width:425px){
+    .body-inicio{
+        height: 100vh;
+        background-position-y: 0rem;
+        background-position-x: 0rem;
+    }
+    .body-nosotros{
+        height: 100vh;
+        background-position-y: 0rem;
+        background-position-x: -7.5rem;
+    }
+    .body-tienda{
+        height: 100%;
+        position: relative;
+        background-position-y: 0rem;
+        background-position-x: 0rem;
+        background-size: cover;
+    }
+    .body-visitanos{
+        background-position-y: 0rem;
+        background-position-x: -5rem;
+    }
+    .contenido1{
+        background-position-y: 0rem;
+        background-position-x: -10rem;
+        padding: 20rem 4rem;
+        .cont1-text{
+            text-align: left;
+            h1{
+                font-size: 4rem;
+                line-height: 6rem;
+            }
+        }
+    }
+    .contenido2{
+        background-position-y: 0rem;
+        background-position-x: -10rem;
+        padding: 32rem 3rem 0rem 0rem;
+        .cont2-text{
+            width: 18rem;
+            text-align: justify;
+            h2{
+                font-size: 3rem;
+                line-height: 3rem;
+            }
+            p{
+                font-size: 1.3rem;
+                line-height: 2rem;
+            }
+        }
+    }
+    .contenido3{
+        background-position-y: 0rem;
+        background-position-x: -3rem;
+        padding: 26rem 0rem 0rem 3rem;
+        .cont3-text{
+            h2{
+                text-align: left;
+            }
+        }
+    }
+    .contenido4{
+        background-position-y: 0rem;
+        background-position-x: -10rem;
+        padding: 10rem 0rem 0rem 3rem;
+    }
+    header{
+        nav{
+            ul{
+                @include flex-containers(column,space-between,flex-start);
+                padding: 6rem 0rem 0rem .5rem;
+                gap: 5rem;
+                li{
+                    a{
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+    }
+    .container-inicio{
+        height: 100vh;
+        @include flex-containers(column,center,center);
+        gap: 2.4rem;
+        padding-bottom: 18rem;
+        padding-right: 0rem;
+        .titulo-inicio{
+            line-height: 7rem;
+            letter-spacing: .2rem;
+            font-size: 5rem;
+            text-align: center;
+        }
+        .texto-inicio{
+            line-height: 2rem;
+            font-size: 1.4rem;
+        }
+    }
+    .container-nosotros{
+        @include flex-containers (column,center,center);
+        .titulo-nosotros{
+            line-height: 7rem;
+            letter-spacing: .2rem;
+            font-size: 5rem;
+            text-align: center;
+        }
+        .texto-nosotros{
+            line-height: 2rem;
+            font-size: 1.4rem;
+        }
+    }
+    .main-visitanos{
+        .titulo-visitanos{
+            @include gird-objets(visit);
+            align-items: center;
+            h1{
+                font-size: 4rem;
+            }
+        }
+        .iframe {
+            @include gird-objets(iframe);
+            iframe{
+                width: 30rem;
+                height: 30rem;
+            }
+        }
+        .info-visitanos{
+            @include gird-objets(texto);
+            align-content: center;
+            gap: 3rem;
+            h2{
+                font-size: 3rem;
+                text-align: center;
+            }
+            p{
+                font-size: 1.6rem;
+                text-align: center;
+            }
+        }
+    }
+
+
+}

@@ -1,0 +1,110 @@
+@media (max-width:1024px){
+    .body-inicio{
+        height: 100vh;
+        background-position-y: 0rem;
+        background-position-x: 0rem;
+    }
+    .body-nosotros{
+        height: 100vh;
+        background-position-y: 0rem;
+        background-position-x: 0rem;
+    }
+    .body-tienda{
+        background-position-y: -30rem;
+    }
+    .body-visitanos{
+    background-position-y: -65rem;
+    }
+    .contenido1{
+        background-position-y: -62rem;
+        padding: 30rem 6rem;
+        .cont1-text{
+            text-align: left;
+            h1{
+                font-size: 8rem;
+            }
+        }
+    }
+    .contenido2{
+        background-position-y: -60rem;
+        justify-content: flex-end;
+        padding: 22rem 6rem;
+    }
+    .contenido3{
+        justify-content: flex-start;
+        background-position-y: -45rem;
+        padding: 18rem 6rem;
+    }
+    .contenido4{
+        background-position-y: -45rem;
+        padding: 18rem 6rem;
+    }
+    .titulo-vinos{
+        display: flex;
+        flex-direction: column;
+        padding: 20rem 0rem 0rem 0rem;
+        h1{
+            font-size: 6rem;
+            text-align: center;
+        }
+    }
+    .vinos{
+        display: flex;
+        justify-content: space-around;
+        padding: 12rem 3rem;
+        gap: 3rem;
+        .vino1{
+            width: 27rem;
+            height: 27rem;
+            span{
+                font-size: 1.8rem;
+                font-weight: 300;
+                padding-top: 2rem;
+            }
+        }
+    }
+    .img-vino1{
+        height: 18rem;
+        min-width: 18rem;
+        object-fit: cover;
+        object-position: 0% 78%;
+        border-radius: 2.5rem;
+        margin-top: 2rem;
+    }
+    .img-vino2{
+        object-position: 0% 99%;
+    }
+    .main-visitanos{
+        height: 100vh;
+        @include grid-visit(5rem repeat(3, 1fr), 10rem repeat(2, 1fr) 10rem, ".    .       .       ." ".  visit     .       ." ".  iframe   texto    texto" ".      .     .         .")
+    }
+    .titulo-visitanos{
+        grid-area: visit;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        h1{
+            font-size: 8rem;
+        }
+    }
+    .iframe {
+        grid-area: iframe;
+        iframe{
+            width: 55rem;
+            height: 50rem;
+        }
+    }
+    .info-visitanos{
+        grid-area: texto;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        gap: 3rem;
+        h2{
+            font-size: 4.5rem;
+        }
+        p{
+            font-size: 1.8rem;
+        }
+    }
+}

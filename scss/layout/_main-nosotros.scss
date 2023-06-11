@@ -1,0 +1,15 @@
+/* propiedades "nosotros" */
+.container-nosotros{
+    @include flex-containers(column,center,flex-start);
+    padding: 17rem 4rem;
+    gap: 5rem;
+    .titulo-nosotros{
+        text-align: left;
+        line-height: 12rem;
+        letter-spacing: .2rem;
+    }
+    .texto-nosotros{
+        text-align: justify;
+        letter-spacing: .05rem;
+    }
+}

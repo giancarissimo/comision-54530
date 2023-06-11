@@ -1,0 +1,297 @@
+@media (max-width:768px){
+    .body-nosotros{
+        height: 100vh;
+        background-position-y: -20rem;
+        background-position-x: 0rem;
+    }
+    .body-tienda{
+        height: 100%;
+        position: relative;
+        background-position-y: 0rem;
+        background-position-x: 0rem;
+        background-size: cover;
+    }
+    .body-visitanos{
+        background-position-y: -28rem;
+    }
+    .background-black{
+        height: 100vh;
+    }
+    .background-black-2{
+        height: 100vh;
+    }
+    .background-black-4{
+        height: 100%;
+    }
+    .background-black-5{
+        height: 100vh;
+        backdrop-filter: blur(.20rem);
+        -webkit-backdrop-filter: blur(.20rem);
+    }
+    .contenido1{
+        background-position-y: -29rem;
+        padding: 30rem 4rem;
+        .cont1-text{
+            text-align: left;
+            h1{
+                font-size: 6rem;
+            }
+        }
+    }
+    .contenido2{
+        background-position-y: -27rem;
+        justify-content: flex-end;
+        padding: 22rem 4rem;
+        .cont2-text{
+            width: 30rem;
+            text-align: justify;
+            h2{
+                font-size: 4rem;
+                line-height: 5rem;
+            }
+            p{
+                font-size: 1.8rem;
+            }
+        }
+    }
+    .contenido3{
+        justify-content: flex-start;
+        background-position-y: -25rem;
+        padding: 18rem 4rem;
+        .cont3-text{
+            h2{
+                text-align: left;
+            }
+        }
+    }
+    .contenido4{
+        background-position-y: -25rem;
+        padding: 18rem 4rem;
+    }
+    header{
+        height: auto;
+        z-index: 1;
+        #hamburger{
+            .button-menu.open{
+                .top-line{
+                    animation-name: top-line-animation;
+                }
+                .middle-line{
+                        animation-name: middle-line-animation;
+                }
+                .bottom-line{
+                    animation-name: bottom-line-animation;
+                }
+            }
+            .button-menu{
+                display: inline-block;
+                cursor: pointer;
+                border: 0;
+                background-color: transparent;
+                color: $color-principal;
+                width: 3.5rem;
+                height: 3.5rem;
+                span{
+                    border-radius: .5rem;
+                    background: $color-principal;
+                    display: block;
+                    width: 60%;
+                    margin: .5rem auto;
+                    height: .2rem;
+                    animation-duration: .5s;
+                    animation-fill-mode: forwards;
+                }
+                .top-line{
+                    animation-name: top-line-animation-close;
+                }
+                .middle-line{
+                    animation-name: middle-line-animation-close;
+                }
+                .bottom-line{
+                    animation-name: bottom-line-animation-close;
+                }
+            }
+        }
+        nav{
+            width: 100vh;
+            height: 0vh;
+            pointer-events: none;
+            overflow: hidden;
+            transition: all .7s ease;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            ul{
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: space-between;
+                padding: 6rem 0rem 0rem 1rem;
+                gap: 6rem;
+                li{
+                    a{
+                        font-size: 2.2rem;
+                        color: $color-principal;
+                    }
+                }
+            }
+        }
+        nav.active{
+            height: 93.6vh;
+            pointer-events: auto;
+        }
+    }
+    @keyframes top-line-animation{
+        50%, 100%{
+            margin: 0 auto;
+            transform: translateY(0.2rem) rotate(-45deg);
+        }
+    }
+    @keyframes middle-line-animation{
+        20%, 100%{
+            margin: 0 auto;
+            width: 0;
+            opacity: 0;
+        }
+    }
+    @keyframes bottom-line-animation{
+        50%, 100%{
+            margin: 0 auto;
+            transform: translateY(-0.2rem) rotate(45deg);
+        }
+    }
+    @keyframes top-line-animation-close{
+        0%{
+            margin: 0 auto;
+            transform: translateY(0.2rem) rotate(-45deg);
+        }
+        50%, 100%{
+            margin: .5rem auto;
+            transform: translateY(0rem) rotate(0deg);
+        }
+    }
+    @keyframes middle-line-animation-close{
+        0%{
+            margin: 0 auto;
+            width: 0;
+            opacity: 0;
+        }
+        20%, 100%{
+            margin: 0 auto;
+            width: 60%;
+            opacity: 1;
+        }
+    }
+    @keyframes bottom-line-animation-close{
+        0%{
+            margin: 0 auto;
+            transform: translateY(-.2rem) rotate(45deg);
+        }
+        50%, 100%{
+            margin: .5rem auto;
+            transform: translateY(0rem) rotate(0deg);
+        }
+    }
+    .container-inicio{
+        .titulo-inicio{
+            line-height: 10rem;
+            letter-spacing: .2rem;
+            font-size: 8rem;
+        }
+        .texto-inicio{
+            font-size: 2rem;
+        }
+    }
+    .container-nosotros{
+        padding: 10rem 4rem;
+        gap: 3rem;
+        .titulo-nosotros{
+            line-height: 10rem;
+            letter-spacing: .2rem;
+            font-size: 8rem;
+        }
+        .texto-nosotros{
+            font-size: 2rem;
+        }
+    }
+    .titulo-vinos{
+        display: flex;
+        flex-direction: column;
+        padding: 13rem 0rem 0rem 0rem;
+        h1{
+            font-size: 4rem;
+            text-align: center;
+        }
+    }
+    .vinos{
+        @include flex-containers(column,space-around,center);
+        padding: 6rem 3rem;
+        gap: 3rem;
+        .vino1{
+            @include flex-vinos(column,center);
+            background-color: rgba(255, 255, 255, 0.3);
+            width: 23rem;
+            height: 25rem;
+            border-radius: 2.5rem;
+            backdrop-filter: blur(2.5rem);
+            -webkit-backdrop-filter: blur(2.5rem);
+            transition: .6s;
+            span{
+                font-size: 1.6rem;
+                font-weight: 300;
+                padding-top: 1.6rem;
+            }
+        }
+    }
+    .img-vino1{
+        height: 18rem;
+        min-width: 18rem;
+        object-fit: cover;
+        object-position: 0% 78%;
+        border-radius: 2.5rem;
+        margin-top: 2rem;
+    }
+    .img-vino2{
+        object-position: 0% 99%;
+    }
+    .main-visitanos{
+        height: 100vh;
+        @include grid-visit(5rem repeat(3, 1fr), 10rem 10rem 30rem 1fr 5rem, ".          .           .           ." "visit      visit       visit       visit"  "iframe     iframe      iframe      iframe" "texto      texto       texto       texto" ".      .     .         .");
+        .titulo-visitanos{
+            @include gird-objets(visit);
+            align-items: center;
+            h1{
+                font-size: 6rem;
+            }
+        }
+        .iframe {
+            @include gird-objets(iframe);
+            iframe{
+                width: 35rem;
+                height: 30rem;
+            }
+        }
+        .info-visitanos{
+            @include gird-objets(texto);
+            align-content: center;
+            gap: 2.4rem;
+            h2{
+                font-size: 4rem;
+                text-align: center;
+            }
+            p{
+                font-size: 1.8rem;
+                text-align: center;
+            }
+        }
+    }
+    .footer-buttons-tienda{
+        position: relative
+    }
+    .wpp-button{
+        .wpp-svg{
+            width: 3.3rem;
+            height: 2.5rem;
+        }
+    }
+}
