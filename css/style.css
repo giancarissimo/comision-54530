@@ -59,7 +59,8 @@ body::-webkit-scrollbar-thumb:hover {
 .body-inicio,
 .body-nosotros,
 .body-tienda,
-.body-visitanos {
+.body-visitanos,
+.body-contacto {
   background-image: url(../assets/images/bar-inicio.jpg);
   background-position-y: -15rem;
   background-size: cover;
@@ -81,11 +82,17 @@ body::-webkit-scrollbar-thumb:hover {
   background-position-y: -98rem;
 }
 
+.body-contacto {
+  background-image: url(../assets/images/bar-contacto.jpg);
+  background-position-y: -90rem;
+}
+
 .background-black,
 .background-black-2,
 .background-black-3,
 .background-black-4,
-.background-black-5 {
+.background-black-5,
+.background-black-6 {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -101,6 +108,12 @@ body::-webkit-scrollbar-thumb:hover {
 .background-black-5 {
   backdrop-filter: blur(0.4rem);
   -webkit-backdrop-filter: blur(0.4rem);
+}
+
+.background-black-6 {
+  background-color: rgba(0, 0, 0, 0.25);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
 /* propiedades de header */
@@ -361,6 +374,128 @@ header ul li a:hover {
   gap: 3rem;
 }
 
+.main-contacto {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 10 rem repeat(2, 1fr) 10rem;
+  grid-template-rows: 10rem repeat(2, 1fr) 10rem;
+  grid-template-areas: ".    .   .   ." ".   contacto    contacto    ." ".   contacto    contacto    ." ".   .   .   .   ";
+}
+
+.main-contacto .container-form {
+  grid-area: contacto;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.main-contacto .container-form .form {
+  width: 90rem;
+  height: 50rem;
+  background-color: rgba(117, 117, 117, 0.35);
+  backdrop-filter: blur(7.5rem);
+  -webkit-backdrop-filter: blur(7.5rem);
+  border-radius: 2.5rem;
+}
+
+.main-contacto .container-form .form .fieldset {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: grid;
+  grid-template-columns: 5rem repeat(2, 1fr) 5rem;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-areas: "contactanos contactanos contactanos contactanos" ".       nombre     apellido    ." ".       celular    email       ." ".       mensaje    mensaje     ." ".       mensaje    mensaje     ." "enviar  enviar     enviar      enviar";
+}
+
+.main-contacto .container-form .form .fieldset h3 {
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+.main-contacto .container-form .form .fieldset label {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.main-contacto .container-form .form .fieldset input,
+.main-contacto .container-form .form .fieldset textarea {
+  background-color: #D9D9D9;
+  border-width: 0rem;
+  color: #363636;
+  border-radius: .25rem;
+  width: 36.4rem;
+  height: 3.5rem;
+  outline: none;
+  font-weight: 300;
+}
+
+.main-contacto .container-form .form .fieldset input::placeholder,
+.main-contacto .container-form .form .fieldset textarea::placeholder {
+  color: #8D8D8D;
+}
+
+.main-contacto .container-form .form .fieldset textarea {
+  resize: none;
+  width: 76.4rem;
+  height: 15rem;
+}
+
+.main-contacto .container-form .form .fieldset input[type="submit"],
+.main-contacto .container-form .form .fieldset textarea[type="submit"] {
+  width: 6rem;
+  height: 2rem;
+}
+
+.main-contacto h3 {
+  grid-area: contactanos;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-contacto .nombre,
+.main-contacto .apellido,
+.main-contacto .celular,
+.main-contacto .e-mail,
+.main-contacto .mensaje {
+  grid-area: nombre;
+  display: grid;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.main-contacto .apellido {
+  grid-area: apellido;
+  display: grid;
+  justify-content: center;
+}
+
+.main-contacto .celular {
+  grid-area: celular;
+  display: grid;
+  justify-content: center;
+}
+
+.main-contacto .e-mail {
+  grid-area: email;
+  display: grid;
+  justify-content: center;
+}
+
+.main-contacto .mensaje {
+  grid-area: mensaje;
+  display: grid;
+  justify-content: center;
+}
+
+.main-contacto .button-form {
+  grid-area: enviar;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
 /* propiedades de los footers */
 .footer-buttons,
 .footer-buttons-tienda,
@@ -407,7 +542,8 @@ header ul li a:hover {
   .body-inicio,
   .body-nosotros,
   .body-tienda,
-  .body-visitanos {
+  .body-visitanos,
+  .body-contacto {
     height: 100vh;
     background-position-y: -35rem;
     background-position-x: 0rem;
@@ -445,7 +581,8 @@ header ul li a:hover {
   .body-inicio,
   .body-nosotros,
   .body-tienda,
-  .body-visitanos {
+  .body-visitanos,
+  .body-contacto {
     height: 100vh;
     background-position-y: 0rem;
     background-position-x: 0rem;
@@ -593,6 +730,8 @@ header ul li a:hover {
 
   .iframe {
     grid-area: iframe;
+    display: grid;
+    justify-content: center;
   }
 
   .iframe iframe {
@@ -640,7 +779,8 @@ header ul li a:hover {
   .background-black-2,
   .background-black-3,
   .background-black-4,
-  .background-black-5 {
+  .background-black-5,
+  .background-black-6 {
     height: 100vh;
   }
 
@@ -805,7 +945,7 @@ header ul li a:hover {
   }
 
   header nav {
-    width: 100vh;
+    width: 100vw;
     height: 0vh;
     pointer-events: none;
     overflow: hidden;
@@ -1055,6 +1195,105 @@ header ul li a:hover {
     width: 3.3rem;
     height: 2.5rem;
   }
+
+  .main-contacto {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 2 rem repeat(2, 1fr) 2rem;
+    grid-template-rows: 6rem repeat(2, 1fr) 2rem;
+    grid-template-areas: ".    .   .   ." ".   contacto    contacto    ." ".   contacto    contacto    ." ".   .   .   .   ";
+  }
+
+  .main-contacto .container-form {
+    grid-area: contacto;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .main-contacto .container-form .form {
+    width: 55rem;
+    height: 70rem;
+  }
+
+  .main-contacto .container-form .form .fieldset {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 8rem repeat(6, 1fr) 1rem;
+    grid-template-areas: "contactanos contactanos contactanos" "nombre nombre nombre" "apellido apellido apellido" "cel cel cel" "email email email" "mensaje mensaje mensaje" "enviar enviar enviar";
+  }
+
+  .main-contacto .container-form .form .fieldset h3 {
+    font-size: 3rem;
+    font-weight: 300;
+  }
+
+  .main-contacto .container-form .form .fieldset label {
+    font-size: 1.8rem;
+    font-weight: 300;
+  }
+
+  .main-contacto .container-form .form .fieldset input,
+  .main-contacto .container-form .form .fieldset textarea {
+    width: 36.4rem;
+    height: 3.5rem;
+    font-weight: 300;
+  }
+
+  .main-contacto .container-form .form .fieldset textarea {
+    resize: none;
+    width: 36.5rem;
+    height: 15rem;
+  }
+
+  .main-contacto h3 {
+    grid-area: contactanos;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main-contacto .nombre,
+  .main-contacto .apellido,
+  .main-contacto .celular,
+  .main-contacto .e-mail,
+  .main-contacto .mensaje {
+    grid-area: nombre;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .main-contacto .apellido {
+    grid-area: apellido;
+    display: grid;
+    justify-content: center;
+  }
+
+  .main-contacto .celular {
+    grid-area: cel;
+    display: grid;
+    justify-content: center;
+  }
+
+  .main-contacto .e-mail {
+    grid-area: email;
+    display: grid;
+    justify-content: center;
+  }
+
+  .main-contacto .mensaje {
+    grid-area: mensaje;
+    display: grid;
+    justify-content: center;
+  }
+
+  .main-contacto .button-form {
+    grid-area: enviar;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @media (max-width: 425px) {
@@ -1062,7 +1301,8 @@ header ul li a:hover {
   .body-inicio,
   .body-nosotros,
   .body-tienda,
-  .body-visitanos {
+  .body-visitanos,
+  .body-contacto {
     height: 100vh;
     background-position-y: 0rem;
     background-position-x: 0rem;
@@ -1280,6 +1520,33 @@ header ul li a:hover {
     font-size: 1.6rem;
     text-align: center;
   }
+
+  .main-contacto .container-form .form {
+    width: 35rem;
+    height: 70rem;
+  }
+
+  .main-contacto .container-form .form .fieldset h3 {
+    font-size: 2.3rem;
+    font-weight: 300;
+  }
+
+  .main-contacto .container-form .form .fieldset label {
+    font-size: 1.6rem;
+    font-weight: 300;
+  }
+
+  .main-contacto .container-form .form .fieldset input,
+  .main-contacto .container-form .form .fieldset textarea {
+    width: 30rem;
+    height: 3rem;
+    font-weight: 300;
+  }
+
+  .main-contacto .container-form .form .fieldset textarea {
+    width: 30rem;
+    height: 15rem;
+  }
 }
 
 @media (max-width: 375px) {
@@ -1287,7 +1554,8 @@ header ul li a:hover {
   .body-inicio,
   .body-nosotros,
   .body-tienda,
-  .body-visitanos {
+  .body-visitanos,
+  .body-contacto {
     height: 100vh;
     background-position-y: 0rem;
     background-position-x: -12rem;
@@ -1297,6 +1565,14 @@ header ul li a:hover {
     height: 100vh;
     background-position-y: 0rem;
     background-position-x: -10rem;
+  }
+
+  .body-tienda {
+    height: 100%;
+    position: relative;
+    background-position-y: 0rem;
+    background-position-x: 0rem;
+    background-size: cover;
   }
 
   header nav.active {
@@ -1321,7 +1597,8 @@ header ul li a:hover {
   .body-inicio,
   .body-nosotros,
   .body-tienda,
-  .body-visitanos {
+  .body-visitanos,
+  .body-contacto {
     height: 100vh;
     background-position-y: 0rem;
     background-position-x: -12rem;
@@ -1331,6 +1608,14 @@ header ul li a:hover {
     height: 100vh;
     background-position-y: 0rem;
     background-position-x: -13rem;
+  }
+
+  .body-tienda {
+    height: 100%;
+    position: relative;
+    background-position-y: 0rem;
+    background-position-x: 0rem;
+    background-size: cover;
   }
 
   header .nav.active {
@@ -1378,5 +1663,32 @@ header ul li a:hover {
   .main-visitanos .iframe iframe {
     width: 26rem;
     height: 29rem;
+  }
+
+  .main-contacto .container-form .form {
+    width: 30rem;
+    height: 70rem;
+  }
+
+  .main-contacto .container-form .form .fieldset h3 {
+    font-size: 2.3rem;
+    font-weight: 300;
+  }
+
+  .main-contacto .container-form .form .fieldset label {
+    font-size: 1.6rem;
+    font-weight: 300;
+  }
+
+  .main-contacto .container-form .form .fieldset input,
+  .main-contacto .container-form .form .fieldset textarea {
+    width: 27rem;
+    height: 3rem;
+    font-weight: 300;
+  }
+
+  .main-contacto .container-form .form .fieldset textarea {
+    width: 27rem;
+    height: 15rem;
   }
 }

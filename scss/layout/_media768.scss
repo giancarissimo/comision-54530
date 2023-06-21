@@ -113,7 +113,7 @@
             }
         }
         nav{
-            width: 100vh;
+            width: 100vw;
             height: 0vh;
             pointer-events: none;
             overflow: hidden;
@@ -256,23 +256,23 @@
     }
     .main-visitanos{
         height: 100vh;
-        @include grid-visit(5rem repeat(3, 1fr), 10rem 10rem 30rem 1fr 5rem, ".          .           .           ." "visit      visit       visit       visit"  "iframe     iframe      iframe      iframe" "texto      texto       texto       texto" ".      .     .         .");
+        @include grid(5rem repeat(3, 1fr), 10rem 10rem 30rem 1fr 5rem, ".          .           .           ." "visit      visit       visit       visit"  "iframe     iframe      iframe      iframe" "texto      texto       texto       texto" ".      .     .         .");
         .titulo-visitanos{
-            @include gird-objets(visit);
+            @include grid-objets(visit);
             align-items: center;
             h1{
                 font-size: 6rem;
             }
         }
         .iframe {
-            @include gird-objets(iframe);
+            @include grid-objets(iframe);
             iframe{
                 width: 35rem;
                 height: 30rem;
             }
         }
         .info-visitanos{
-            @include gird-objets(texto);
+            @include grid-objets(texto);
             align-content: center;
             gap: 2.4rem;
             h2{
@@ -292,6 +292,63 @@
         .wpp-svg{
             width: 3.3rem;
             height: 2.5rem;
+        }
+    }
+    .main-contacto{
+        height: 100vh;
+        @include grid(2 rem repeat(2, 1fr) 2rem, 6rem repeat(2, 1fr) 2rem, ".    .   .   ." ".   contacto    contacto    ." ".   contacto    contacto    ." ".   .   .   .   ");
+        .container-form{
+            @include grid-objets(contacto);
+            align-content: center;
+            .form{
+                width: 55rem;
+                height: 70rem;
+                .fieldset{
+                    @include grid(repeat(3, 1fr), 8rem repeat(6, 1fr) 1rem, "contactanos contactanos contactanos" "nombre nombre nombre" "apellido apellido apellido" "cel cel cel" "email email email" "mensaje mensaje mensaje" "enviar enviar enviar");
+                    h3{
+                        font-size: 3rem;
+                        font-weight: 300;
+                    }
+                    label{
+                        font-size: 1.8rem;
+                        font-weight: 300;
+                    }
+                    input{
+                        width: 36.4rem;
+                        height: 3.5rem;
+                        font-weight: 300;
+                    }
+                    textarea{
+                        resize: none;
+                        width: 36.5rem;
+                        height: 15rem;
+                    }
+                }
+            }
+        }
+        h3{
+            @include grid-objets (contactanos);
+            align-items: center;
+        }
+        .nombre{
+            @include grid-objets (nombre);
+            align-content: center;
+        }
+        .apellido{
+            @include grid-objets (apellido);
+        }
+        .celular{
+            @include grid-objets (cel);
+        }
+        .e-mail{
+            @include grid-objets (email);
+        }
+        .mensaje{
+            @include grid-objets (mensaje);
+        }
+        .button-form{
+            @include grid-objets (enviar);
+            align-items: center;
         }
     }
 }

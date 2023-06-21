@@ -76,28 +76,24 @@
     }
     .main-visitanos{
         height: 100vh;
-        @include grid-visit(5rem repeat(3, 1fr), 10rem repeat(2, 1fr) 10rem, ".    .       .       ." ".  visit     .       ." ".  iframe   texto    texto" ".      .     .         .")
+        @include grid(5rem repeat(3, 1fr), 10rem repeat(2, 1fr) 10rem, ".    .       .       ." ".  visit     .       ." ".  iframe   texto    texto" ".      .     .         .")
     }
     .titulo-visitanos{
-        grid-area: visit;
-        display: grid;
-        justify-content: center;
+        @include grid-objets(visit);
         align-items: center;
         h1{
             font-size: 8rem;
         }
     }
-    .iframe {
-        grid-area: iframe;
+    .iframe{
+        @include grid-objets(iframe);
         iframe{
             width: 55rem;
             height: 50rem;
         }
     }
     .info-visitanos{
-        grid-area: texto;
-        display: grid;
-        justify-content: center;
+        @include grid-objets(texto);
         align-content: center;
         gap: 3rem;
         h2{

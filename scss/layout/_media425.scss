@@ -110,21 +110,21 @@
     }
     .main-visitanos{
         .titulo-visitanos{
-            @include gird-objets(visit);
+            @include grid-objets(visit);
             align-items: center;
             h1{
                 font-size: 4rem;
             }
         }
         .iframe {
-            @include gird-objets(iframe);
+            @include grid-objets(iframe);
             iframe{
                 width: 30rem;
                 height: 30rem;
             }
         }
         .info-visitanos{
-            @include gird-objets(texto);
+            @include grid-objets(texto);
             align-content: center;
             gap: 3rem;
             h2{
@@ -137,6 +137,31 @@
             }
         }
     }
-
-
+    .main-contacto{
+        .container-form{
+            .form{
+            width: 35rem;
+            height: 70rem;
+            .fieldset{
+                h3{
+                    font-size: 2.3rem;
+                    font-weight: 300;
+                }
+                label{
+                    font-size: 1.6rem;
+                    font-weight: 300;
+                }
+                input{
+                    width: 30rem;
+                    height: 3rem;
+                    font-weight: 300;
+                }
+                textarea{
+                    width: 30rem;
+                    height: 15rem;
+                }
+            }
+            }
+        }
+    }
 }
